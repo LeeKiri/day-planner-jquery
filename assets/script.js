@@ -34,7 +34,7 @@ $(document).ready(function () {
     function init() {
         reload();
         colorChange();
-        var update = setInterval(colorChange, 60000);
+        var update = setInterval(colorChange, 1000);
     };
 
     // changes appointment color depending on time of day past/present/future
@@ -42,7 +42,7 @@ $(document).ready(function () {
     function colorChange() {
         for (i = 9; i < 18; i++) {
             if (i === currentHour) {
-                $(`div[data-time= '${i}']`).children("textarea").addClass("present")
+                $(`div[data-time= '${i}']`).children("textarea").addClass("present").removeClass("future")
             } else if (i < currentHour) {
                 $(`div[data-time= '${i}']`).children("textarea").addClass("past")
             } else if (i > currentHour) {
