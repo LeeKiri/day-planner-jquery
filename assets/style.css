@@ -24,6 +24,9 @@ textarea{
 .description{
   white-space: pre-wrap;
 }
+.input-group-text{
+  width: 60px;
+}
 
 .time-block{
   text-align: center;
