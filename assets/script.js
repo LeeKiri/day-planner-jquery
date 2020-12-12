@@ -6,10 +6,8 @@ $(document).ready(function () {
     var displayDay = document.querySelector("#currentDay");
     displayDay.innerText = currentTime.format("dddd, Do, MMM");
     var currentHour = currentTime.format("H");
-    var fixcurrentime = true
-    if (fixcurrentime)
-        currentHour = 13;
 
+    //loads the page
 
     init();
 
@@ -19,8 +17,6 @@ $(document).ready(function () {
         e.preventDefault();
         var inputSave = ($(this).closest("div").children("textarea").val());
         var appointmentTime = $(this).closest("div").data("time");
-
-
         localStorage.setItem(appointmentTime, inputSave);
     });
 
@@ -33,14 +29,15 @@ $(document).ready(function () {
         }
     };
 
+    // displays all stored data
+
     function init() {
         reload();
         colorChange();
+        var update = setInterval(colorChange, 60000);
     };
 
     // changes appointment color depending on time of day past/present/future
-
-    var update = setInterval(colorChange, 60000);
 
     function colorChange() {
         for (i = 9; i < 18; i++) {
@@ -53,4 +50,6 @@ $(document).ready(function () {
             }
         };
     };
+
+
 });

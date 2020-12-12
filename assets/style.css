@@ -21,16 +21,8 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-}
 .input-group-text{
   width: 60px;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
 }
 
 .row {
