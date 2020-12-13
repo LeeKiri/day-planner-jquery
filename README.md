@@ -18,6 +18,6 @@ https://github.com/LeeKiri/day-planner-jquery
 
 ### Screenshot
 ![Screenshot 2020-12-12 185355](https://user-images.githubusercontent.com/73642462/101979230-6ff1e800-3caf-11eb-9188-701c7032b6f8.png)
-
+![Screenshot 2020-12-14 093937](https://user-images.githubusercontent.com/73642462/102026154-5c9a6600-3df0-11eb-8946-12bfbccf1982.png)
 
 

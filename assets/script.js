@@ -6,6 +6,7 @@ $(document).ready(function () {
     var displayDay = document.querySelector("#currentDay");
     displayDay.innerText = currentTime.format("dddd, Do, MMM");
     var currentHour = currentTime.format("H");
+    console.log(currentHour);
 
     //loads the page
 
@@ -34,19 +35,19 @@ $(document).ready(function () {
     function init() {
         reload();
         colorChange();
-        var update = setInterval(colorChange, 1000);
+        var update = setInterval(colorChange, 60000);
     };
 
     // changes appointment color depending on time of day past/present/future
 
     function colorChange() {
         for (i = 9; i < 18; i++) {
-            if (i === currentHour) {
-                $(`div[data-time= '${i}']`).children("textarea").addClass("present").removeClass("future")
+            if (i == currentHour) {
+                $(`div[data-time= '${i}']`).children("textarea").addClass("present");
             } else if (i < currentHour) {
-                $(`div[data-time= '${i}']`).children("textarea").addClass("past")
+                $(`div[data-time= '${i}']`).children("textarea").addClass("past");
             } else if (i > currentHour) {
-                $(`div[data-time= '${i}']`).children("textarea").addClass("future")
+                $(`div[data-time= '${i}']`).children("textarea").addClass("future");
             }
         };
     };
