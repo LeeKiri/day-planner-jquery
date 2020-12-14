@@ -3,7 +3,7 @@ $(document).ready(function () {
     //sets time and date with moment.js
 
     var currentTime = moment();
-    var displayDay = document.querySelector("#currentDay");
+    var displayDay = $("#currentDay");
     displayDay.innerText = currentTime.format("dddd, Do, MMM");
     var currentHour = currentTime.format("H");
     console.log(currentHour);
@@ -38,9 +38,11 @@ $(document).ready(function () {
         var update = setInterval(colorChange, 60000);
     };
 
+
     // changes appointment color depending on time of day past/present/future
 
     function colorChange() {
+        currentHour = moment().format("H");
         for (i = 9; i < 18; i++) {
             if (i == currentHour) {
                 $(`div[data-time= '${i}']`).children("textarea").addClass("present");
