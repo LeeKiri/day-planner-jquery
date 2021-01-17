@@ -2,11 +2,11 @@ $(document).ready(function () {
 
     //sets time and date with moment.js
 
-    var currentTime = moment();
-    var displayDay = $("#currentDay");
-    displayDay.innerText = currentTime.format("dddd, Do, MMM");
-    var currentHour = currentTime.format("H");
-    console.log(currentHour);
+    // var currentTime = moment();
+    $("#currentDay").text(moment().format("dddd, Do, MMM"));
+
+    // displayDay.textContent = moment().format("dddd, Do, MMM");
+    var currentHour = moment().format("H");
 
     //loads the page
 
